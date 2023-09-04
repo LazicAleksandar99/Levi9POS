@@ -27,6 +27,7 @@ namespace Levi9.POS.WebApi.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> ClientAuthentication(ClientLogin clientLogin)
         {
+	    int a = 5;
             _logger.LogInformation("Entering {FunctionName} in AuthenticationController. Timestamp: {Timestamp}.", nameof(ClientAuthentication), DateTime.UtcNow);
             ClientDto clientDto = await _clientService.GetClientByEmail(clientLogin.Email);
             if (clientDto == null)
